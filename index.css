@@ -242,7 +242,7 @@ header table {
     font-family: 'Roboto Mono', monospace;
     font-size:18px;
     transition:0.4s ease-in-out;
-    color:#000;
+    color:#111111;
     font-weight:bold;
 }
 #contact form textarea {
@@ -257,7 +257,7 @@ header table {
     background:transparent;
     resize:none;
     transition:0.4s ease-in-out;
-    color:#000;
+    color:#111111;
     font-weight:bold;
 }
 #contact form input:focus {
@@ -284,7 +284,7 @@ header table {
     text-decoration:none;
 }
 ::placeholder {
-    color:#000;
+    color:#111111;
 }
 button:focus {
     outline:none;
