@@ -58,9 +58,7 @@
     <div id="work">
         <h1>work</h1>
         <!--test video-->
-        <div id="test">
-    <h2>Video gallery</h2>
-    <p>Doesn't use anything, keeps the existing links and just displays them as a gallery</p>
+       
     <pre>$(document).ready(function(){
     $("ul.youtube-videogallery1").youtubeVideoGallery( {plugin:'none'} );
 });</pre>
@@ -79,7 +77,30 @@
 
 <script>
     $(document).ready(function(){
-        $("ul.youtube-videogallery").youtubeVideoGallery( {plugin:'none',assetFolder:'../'} );
+        $("ul.youtube-videogallery").youtubeVideoGallery( {assetFolder:'../'} );
+
+        $("ul.youtube-videogallery-compact").youtubeVideoGallery( {
+                assetFolder:'../',
+                style:'compact',
+                title:'none'
+            }
+        );
+
+        $("ul.youtube-videogallery-search").youtubeVideoGallery({
+            apiFallbackUrl: 'https://www.youtube.com/results?search_query=football+soccer',
+            apiUrl: 'https://gdata.youtube.com/feeds/api/videos?q=football+-soccer&orderby=published&start-index=1&alt=json&max-results=6&v=2',
+            assetFolder:'../'
+        });
+        $("ul.youtube-videogallery-user").youtubeVideoGallery({
+            apiFallbackUrl: 'http://www.youtube.com/user/mayarcade',
+            apiUrl:'http://gdata.youtube.com/feeds/api/users/mayarcade/uploads?v=2&alt=jsonc&max-results=6',
+            assetFolder:'../'
+        });
+        $("ul.youtube-videogallery-playlist").youtubeVideoGallery({
+            apiFallbackUrl: 'http://www.youtube.com/playlist?list=PLdLRpN7S7Ubw-OQI7MS04NuYpXHadH6xc',
+            apiUrl:'http://gdata.youtube.com/feeds/api/playlists/PLdLRpN7S7Ubw-OQI7MS04NuYpXHadH6xc?alt=json&start-index=1&max-results=6&v=2',
+            assetFolder:'../'
+        });
     });
 </script>
 
